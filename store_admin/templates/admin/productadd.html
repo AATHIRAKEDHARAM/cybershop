@@ -1,0 +1,171 @@
+{% extends 'admin/master.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="col-md-10 " style="margin-left: 227px;background-color: #fbfcff">
+    <div class="container mt-4 " style="border: 1px solid black;">
+        
+    
+
+          <div class=" text-left">
+            <h2 nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">Add product</h2>
+            {% comment %} <h2>ADD PRODUCT</h2> {% endcomment %}
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <form class="needs-validation" novalidate enctype="multipart/form-data" id="add_product" onload="resetSelection();">
+                    <div class="mb-3">
+                        <label for="title">TITLE</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="title" placeholder="Title of the product" required>
+                            
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="regproductid">REGISTERED PRODUCT ID</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="regproductid" placeholder="Registered product id" required>
+                            
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description">DESCRIPTION </label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="description" required></textarea>
+                            
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customFile">UPLOAD PRODUCT PICTURE</label>
+                        <input type="file" id="customFile" placeholder="choose" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please upload a picture.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price">PRICE</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="price" placeholder="₹ 0.0" required>
+                            <div class="invalid-feedback">
+                                Please enter the price.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity">QUANTITY</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="quantity" placeholder="Available quantity" required>
+                            <div class="invalid-feedback">
+                                Please enter the quantity.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-6">
+                            <label for="weight">Weight</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="weight" placeholder="0.0" required>
+                                <div class="invalid-feedback">
+                                    Please enter the weight of the product.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="weightunit">WEIGHT UNIT</label>
+                            <select class="custom-select d-block w-100 form-control" id="weightunit" required>
+                                <option value="">CHOOSE</option>
+                                <option>kg</option>
+                                <option>g</option>
+                                <option>lb</option>
+                                <option>oz</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-6">
+                            <label for="weightunit">MRP</label>
+        
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="weight" placeholder="" required>
+                                
+                            </div>
+                        </div>
+                            <div class="col-md-6 mb-6">
+                                <label for="weightunit">MANUFACTURING YEAR</label>
+        
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="weight" placeholder="" required>
+                                
+                            </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6 mb-6 mt-3">
+                        <label for="weightunit">PRODUCT DETAILS</label>
+                        <div class="input-group">
+                            
+                            <input type="number" class="form-control" id="weight" placeholder="" required>
+                            
+                        </div>
+                </div>
+                <div class="col-md-6 mb-6 mt-3">
+                    <label for="weightunit">PRODUCTRATE</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="weight" placeholder="" required>
+                        
+                    </div>
+            </div>
+                    
+                    
+                           
+                          <div class="col-md-6">
+                            
+                            <label for="category"> Category</label>
+                            <select class="custom-select d-block w-100" id="category" size="1" onchange="makeSubmenu(this.value);" required>
+                                <option value="" disabled selected>Choose</option>
+                                <option>MENSWEAR</option>
+                                <option>WOMENWEAR</option>
+                                <option>new-arrivals</option>
+                                <option>bestsellers</option>
+                                <option value="">picks of the month</option>
+                                </select>
+                           
+                        </div>
+                    </div>
+                       
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-6">
+                            <label for="vendor">SELLER</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="brand" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Please enter the brand name.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="status">Status</label>
+                            <select class="custom-select d-block w-100" id="status" required>
+                                <option value="">Choose</option>
+                                <option>Active</option>
+                                <option>Draft</option>
+                            </select>
+                           
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}

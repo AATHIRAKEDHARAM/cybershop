@@ -1,0 +1,126 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/0c7adfd7bb.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .l1{
+    display: inline-block;
+    margin-top: 2em;
+    
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        {% comment %} <a class="navbar-brand" href="#"><img src="{% static 'images/r1.jpg' %}" class="mr-2" style="height: 85px;width: 239px;"></a> {% endcomment %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 font-weight-bold">
+            
+            
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn btn-PRIMARY" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false" style="margin-right: 2em; border-radius: 16px;">
+                ADMIN
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#" class="btn btn-secondary">Profile</a>
+                <a class="dropdown-item" href="#" class="btn btn-danger" >Log out</a>
+                
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid" style="margin-top: 7em;">
+        <div class="row">
+            <div class="col-md-2 bg-warning position-fixed" style="height: 530px;">
+              <a href="{% url 'store_admin:dash' %}" class="text-dark"><h4> DASHBOARD</h4></a>
+
+              <div class="dropdown MT-4">
+                  <a href="" class=" dropdown-toggle text-dark font-weight-bold text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="font-size: 18px;text-decoration: none;">
+                   category
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'store_admin:cat' %}">category list</a>
+                    <a class="dropdown-item" href="{% url 'store_admin:catadd' %}">add category</a>
+                   
+                  </div>
+                </div>
+                <div class="dropdown mt-3">
+                  <a href="" class=" dropdown-toggle text-dark font-weight-bold text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="font-size: 18px;text-decoration: none;">
+                   PRODUCT
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'store_admin:plist' %}">product list</a>
+                    <a class="dropdown-item" href="{% url 'store_admin:padd' %}">add product</a>
+                   
+                  </div>
+                </div>
+                <div class="dropdown mt-3">
+                  <a href="" class=" dropdown-toggle text-dark font-weight-bold text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="font-size: 18px;text-decoration: none;">
+                   seller
+                </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'store_admin:sell' %}">seller list</a>
+                    <a class="dropdown-item" href="{% url 'store_admin:addsell' %}">add seller</a>
+                  
+                  </div>
+                </div>
+                <div class="dropdown mt-3">
+                  <a href="" class=" dropdown-toggle text-dark font-weight-bold text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false" style="font-size: 18px;text-decoration: none;">
+                    order
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'store_admin:order' %}">order list</a>
+                    <a class="dropdown-item" href="{% url 'store_admin:orderdet' %}">order details</a>
+                  
+                    
+                  </div>
+                </div>
+            
+            </div>
+
+              {% block content %}
+              {% endblock %}
+        </div>
+      </div>
+       
+        {% comment %} <div class="container-fluid  "  style="background-color:#f5f5f5; height: 100px;">
+          <div class="row">
+        
+        <div class="col-md-12 text-center mt-3" >
+          <p>copyrigts @ online aathirakedharam 2022. All rights are reserved</p>
+        </div>
+      
+          </div>
+        </div> {% endcomment %}
+        <!-- Start Footer -->
+    <footer class="container-fluid bg-dark text-center p-2 mt-5">
+      <small class="text-white">Copyright &copy; 2022 || Designed by aathirakedaharam || </small>
+      <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
+  </footer> <!-- End Footer -->
+
+     
+    
+       
+      
+            
+  </body>
+  </html>
+  
+  

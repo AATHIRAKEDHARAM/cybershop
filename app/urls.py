@@ -1,5 +1,7 @@
 from django.urls import path
-from app import views
+from . import views
+
+app_name='app'
 urlpatterns = [
     path('', views.home,name="home"),
     path('product-detail/', views.product_detail, name='product-detail'),
@@ -10,7 +12,10 @@ urlpatterns = [
     path('orders/', views.orders, name='orders'),
     path('changepassword/', views.change_password, name='changepassword'),
     path('mobile/', views.mobile, name='mobile'),
-    path('login/', views.login, name='login'),
-    path('registration/', views.customerregistration, name='customerregistration'),
+    path('adminlogin/', views.adminlogin, name='adminlogin'),
+    path('customerlogin/', views.customerlogin, name='customerlogin'),
+    path('sellerlogin/', views.sellerlogin, name='sellerlogin'),
+    path('customerregistration/', views.customerregistration, name='customerregistration'),
+    path('sellerregistration/', views.sellerregistration, name='sellerregistration'),
     path('checkout/', views.checkout, name='checkout'),
 ]

@@ -39,7 +39,7 @@
                Electronics
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
+               <li><a class="dropdown-item" href="{% url 'app:mobile' %}">Mobile</a></li>
                <li><a class="dropdown-item" href="#">Laptop</a></li>
              </ul>
            </li>
@@ -64,21 +64,30 @@
                 Shopx
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                <li><a class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
-                <li><a class="dropdown-item" href="{% url 'changepassword' %}">Change Password</a></li>
+                <li><a class="dropdown-item" href="{% url 'app:profile' %}">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'app:orders' %}">Orders</a></li>
+                <li><a class="dropdown-item" href="{% url 'app:changepassword' %}">Change Password</a></li>
                 <li><a class="dropdown-item" href="#">Logout</a></li>
               </ul>
             </li>
             <li class="nav-item mx-2">
-             <a href="{% url 'add-to-cart' %}" class="nav-link text-white"><span class="badge bg-danger">4</span> Cart </a>
+             <a href="{% url 'app:add-to-cart' %}" class="nav-link text-white"><span class="badge bg-danger">4</span> Cart </a>
+            
+            <li class="nav-item dropdown mx-2">
+             <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Login</a>
+             <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="{% url 'app:customerlogin' %}">Customer Login</a></li>
+              <li><a class="dropdown-item" href="{% url 'app:sellerlogin' %}">Seller Login</a></li>
+             </ul>
+            <li class="nav-item dropdown mx-2">
+             <a href="" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registration</a>
+              <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+               <li><a class="dropdown-item" href="{% url 'app:customerregistration' %}">User Registration</a></li>
+               <li><a class="dropdown-item" href="{% url 'app:sellerregistration' %}">Seller Registration</a></li>
+              </ul>
             </li>
-            <li class="nav-item mx-2">
-             <a href="{% url 'login' %}" class="nav-link text-white">Login</a>
-            </li>
-            <li class="nav-item mx-2">
-             <a href="{% url 'customerregistration' %}" class="nav-link text-white">Registration</a>
-            </li>
+              
+
           </ul>
          </div>
        </div>

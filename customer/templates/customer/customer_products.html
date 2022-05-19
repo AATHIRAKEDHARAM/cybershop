@@ -1,0 +1,582 @@
+{% extends 'customer/customer_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <!-- start of navigation links to other pages -->
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link link-dark" href="#">Home /</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-dark  " href="#">products /</a>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+    <!-- end of navigation links to other pages -->
+    <!-- start of sorting products dropdown  -->
+    <div class="d-flex justify-content-end ">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort:What's New
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">What's New</a></li>
+                <li><a class="dropdown-item" href="#">Better Discount</a></li>
+                <li><a class="dropdown-item" href="#">Popularity</a></li>
+                <li><a class="dropdown-item" href="#">Price:Low to High</a></li>
+                <li><a class="dropdown-item" href="#">Price:Low to High</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end of sorting products dropdown  -->
+    <div class="row border-top ">
+        <!-- start of filter products  -->
+        <div class="col-md-2 border-end">
+            <h6>CATEGORIES</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+            MENS WEAR
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+            WOMENS WEAR
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+            Best Sellers
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+            picks of the month
+          </label>
+            </div>
+            
+        
+        <!-- end of categories filter  -->
+        <!-- start of brands filter  -->
+        {% comment %} <div class="brands border-top">
+            <h6>SELLERS</h6>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+            chethan bhagath
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  Siddharth Maheshwari
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  shivendra kapoor
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+            cafe morgan
+          </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                  paulo coelho
+          </label>
+            </div>
+        </div>
+       
+            <!-- start of gender filter  -->
+            <!-- start of categories filter  -->
+            <div class="categories border-top">
+                <b>LANGUAGES</b>
+                <!-- start of gender filter  -->
+                <div class="gender">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                    HINDI
+                  </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                    ENGLISH
+                  </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                    MALAYALAM
+                  </label>
+                    </div>
+                    
+                </div>  
+            </div>   {% endcomment %}
+            <!-- end of brands filter  -->
+            <!-- start of price filter  -->
+            <div class="price border-top">
+                <h6>PRICE</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                Rs. 100 to Rs. 200
+              </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                Rs. 200 to Rs. 500
+              </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                Rs. 500 to Rs. 1000
+              </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                Rs. 1000 to Rs. 5000
+              </label>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-md-10 pt-2">
+            <div class="row">
+                
+
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16rem;">
+                          <img src="{% static 'customer_static/images/im.jpg'%}" class="img-fluid img1  " alt="...">
+                          <div class="card-body">
+                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                            <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            <a href="#" class="btn btn1 btn-primary text-center" data-toggle="modal"  data-target="#lymph"> View Details</a>
+                          </div>
+                        </div>
+                            
+                        </div>
+                
+               
+                        <div class="col-md-3 d-flex justify-content-center">
+                            <div class="card" style="width: 16rem;">
+                              <img src="{% static 'user_static/images/400.jpg'%}" class="img-fluid img6  " alt="...">
+                              <div class="card-body">
+                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                <a href="#" class="btn btn1 btn-primary text-center" data-toggle="modal" data-target="#missing">View Details</a>
+                              </div>
+                            </div>
+                                
+                            </div>
+                
+                            
+                
+                <div class="col-md-3 d-flex justify-content-center">
+                                <div class="card" style="width: 16rem;">
+                                  <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                  <div class="card-body">
+                                    <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                    <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                    <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                  </div>
+                                </div>
+                                    
+                                </div>
+              
+                
+                    <div class="col-md-3 d-flex justify-content-center">
+                                    <div class="card" style="width: 16rem;">
+                                      <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                      <div class="card-body">
+                                        <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                      </div>
+                                    </div>
+                                        
+                                    </div>
+                   
+                   
+                        
+                                    <div class="col-md-3 d-flex justify-content-center">
+                                        <div class="card" style="width: 16rem;">
+                                          <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                          <div class="card-body">
+                                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                            <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                            <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                          </div>
+                                        </div>
+                                            
+                                        </div>
+                                        <div class="col-md-3 d-flex justify-content-center">
+                                            <div class="card" style="width: 16rem;">
+                                              <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                              <div class="card-body">
+                                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                              </div>
+                                            </div>
+                                                
+                                            </div>
+                                            <div class="col-md-3 d-flex justify-content-center">
+                                                <div class="card" style="width: 16rem;">
+                                                  <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                  <div class="card-body">
+                                                    <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                    <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                    <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                  </div>
+                                                </div>
+                                                    
+                                                </div>
+                                                <div class="col-md-3 d-flex justify-content-center">
+                                                    <div class="card" style="width: 16rem;">
+                                                      <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                      <div class="card-body">
+                                                        <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                        <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                      </div>
+                                                    </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                        <div class="card" style="width: 16rem;">
+                                                          <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                          <div class="card-body">
+                                                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                            <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                            <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                          </div>
+                                                        </div>
+                                                       
+                                                        </div>
+                                                        <div class="col-md-3 d-flex justify-content-center">
+                                                            <div class="card" style="width: 16rem;">
+                                                              <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                              <div class="card-body">
+                                                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                              </div>
+                                                            </div>
+                                                                
+                                                            </div>                                                
+                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                <div class="card" style="width: 16rem;">
+                                                                  <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                  <div class="card-body">
+                                                                    <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                    <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                    <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                  </div>
+                                                                </div>
+                                                                    
+                                                                </div>
+                                                                <div class="col-md-3 d-flex justify-content-center">
+                                                                    <div class="card" style="width: 16rem;">
+                                                                      <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                      <div class="card-body">
+                                                                        <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                        <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                      </div>
+                                                                    </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                        <div class="card" style="width: 16rem;">
+                                                                          <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                          <div class="card-body">
+                                                                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                            <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                            <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                          </div>
+                                                                        </div>
+                                                                            
+                                                                        </div>
+                                                                        <div class="col-md-3 d-flex justify-content-center">
+                                                                            <div class="card" style="width: 16rem;">
+                                                                              <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                              <div class="card-body">
+                                                                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                                <a href="#" class="btn btn1 btn-primaary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                              </div>
+                                                                            </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-md-3 d-flex justify-content-center">
+                                                                                <div class="card" style="width: 16rem;">
+                                                                                  <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                                  <div class="card-body">
+                                                                                    <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                                    <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                                    <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                                  </div>
+                                                                                </div>
+                                                                                    
+                                                                                </div>
+                                                                                <div class="col-md-3 d-flex justify-content-center">
+                                                                                    <div class="card" style="width: 16rem;">
+                                                                                      <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                                      <div class="card-body">
+                                                                                        <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                                        <a href="#" class="btn btn1 btn-primaary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                        
+                                                                                    </div>
+                                                                                    <div class="col-md-3 d-flex justify-content-center">
+                                                                                        <div class="card" style="width: 16rem;">
+                                                                                          <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                                          <div class="card-body">
+                                                                                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                                            <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                                            <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                            
+                                                                                        </div>
+                                                                                        <div class="col-md-3 d-flex justify-content-center">
+                                                                                            <div class="card" style="width: 16rem;">
+                                                                                              <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                                                                              <div class="card-body">
+                                                                                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                                                                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                                                                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                                                                                <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                                
+                                                                                            </div>
+
+                                                                                          
+                                                                                          
+                            <div class="col-md-3 d-flex justify-content-center">
+                                                                                                
+                                
+                                <div class="card" style="width: 16rem;">
+                             <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                 <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                        </div>
+                        </div>
+                                                                                                    
+                         </div>
+                         <div class="col-md-3 d-flex justify-content-center">
+                            <div class="card" style="width: 16rem;">
+                              <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                              <div class="card-body">
+                                <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                              </div>
+                            </div>
+                                
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-center">
+                                <div class="card" style="width: 16rem;">
+                                  <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                  <div class="card-body">
+                                    <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                    <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                    <a href="#" class="btn btn1 btn-primary text-center"><i class="fa-solid fa-cart-shopping"></i>Add to cart</a>
+                                  </div>
+                                </div>
+                                    
+                                </div>
+                                <div class="col-md-3 d-flex justify-content-center">
+                                    <div class="card" style="width: 16rem;">
+                                      <img src="{% static 'user_static/images//lynch2.jpg'%}" class="img-fluid img1  " alt="...">
+                                      <div class="card-body">
+                                        <h6 class="card-title text-center">Lynchpin:The Best Laid</h6>
+                                        <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>260 </h6>
+                                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                                        <a href="#" class="btn btn1 btn-primary text-center">View deatails</a>
+                                      </div>
+                                    </div>
+                                        
+                                    </div>
+                  
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+   <div class="container">
+    
+   <div class="modal fade" id="missing" >
+    <div class="modal-dialog">
+      <div class="modal-content " style="width: 145%;">
+        <div class="modal-header ">
+          <h5 class="modal-title text-center text-dark" id="exampleModalLabel" style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Book Details
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body " style="background-color: #fafafa;">
+          <div class="container-fluid">
+            <div class="row">
+                <!-- start of navigation links to other pages -->
+                <div class="col-md-12">
+                    <ul class="nav ">
+                        <li class="nav-item">
+                            <a class="nav-link  link-dark" href="">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-dark" href="">all products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-dark  " href="">fiction</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of navigation links to other pages -->
+                <!-- start of product pictures -->
+                <div class="col-md-6">
+                    <img src="{% static 'user_static/images/400.jpg'%}" class="card-img-top" alt="..." style="width:100%">
+                </div>
+                <!-- end of product pictures -->
+                <!-- start product details -->
+                <div class="col-md-6">
+                    <h3>400</h3>
+                    <p style="font-size: 28px;"> author:chetan bhagath</p>
+                   
+                    <button type="button" class="btn-xs rounded-3 bg-transparent" disabled>4.5 stars</button>
+                    <hr>
+                    <h4 style="display: inline;" class="p-1">Rs.260 </h4><br><br>
+                    <h6 class="font-weight-bolder">Quantity required</h6>
+                    <input type="number" class="form-control-sm" id="quantity"  value="1" min="1" placeholder="Enter quantity">
+                    <br><br>
+                    <button type="button" id="btn_add" onclick="addtobag('{{productdata.id}}')" class="btn btn-warning" href="" data-dismiss="modal">Add to cart</button>
+                   
+                </div>
+                <!-- end of product details -->
+            </div>
+        </div>
+         
+        <div class="modal-footer d-flex justify-content-between mx-2">
+        
+         
+      
+      </div>
+    </div>
+  </div>
+   </div>
+    </div>
+   </div>
+
+
+
+
+   
+
+   <div class="container">
+    
+    <div class="modal fade" id="lymph" >
+     <div class="modal-dialog">
+       <div class="modal-content " style="width: 145%;">
+         <div class="modal-header ">
+           <h5 class="modal-title text-center text-dark" id="exampleModalLabel" style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Book Details
+           </h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body " style="background-color: #fafafa;">
+           <div class="container-fluid">
+             <div class="row">
+                 <!-- start of navigation links to other pages -->
+                 <div class="col-md-12">
+                     <ul class="nav ">
+                         <li class="nav-item">
+                             <a class="nav-link  link-dark" href="">Home </a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link link-dark" href="">all books</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link link-dark  " href="">fiction</a>
+                         </li>
+                     </ul>
+                 </div>
+                
+                 <div class="col-md-6">
+                     <img src="{% static 'user_static/images//lynch2.jpg'%}" class="card-img-top" alt="..." style="width:100%; height: 333px;">
+                 </div>
+               
+                 <div class="col-md-6">
+                     <h3>LYNCHPIN</h3>
+                     <p style="font-size: 28px;"> author:Siddarth Maheshwari</p>
+                    
+                     <button type="button" class="btn-xs rounded-3 bg-transparent" disabled>4.5 stars</button>
+                     <hr>
+                     <h4 style="display: inline;" class="p-1">Rs.260 </h4><br><br>
+                     <h6 class="font-weight-bolder">Quantity required</h6>
+                     <input type="number" class="form-control-sm" id="quantity"  value="1" min="1" placeholder="Enter quantity">
+                     <br><br>
+                     <button type="button" id="btn_add" onclick="addtobag('{{productdata.id}}')" class="btn btn-warning" href="" data-dismiss="modal">Add to cart</button>
+                    
+                 </div>
+                 <!-- end of product details -->
+             </div>
+         </div>
+          
+         <div class="modal-footer d-flex justify-content-between mx-2">
+         
+          
+       
+       </div>
+     </div>
+   </div>
+    </div>
+     </div>
+    </div>
+{% endblock %}

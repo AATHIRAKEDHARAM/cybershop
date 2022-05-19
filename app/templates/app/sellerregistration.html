@@ -1,0 +1,138 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title %}
+{% block main-content %}
+
+<div id="page-content-wrapper">
+    <div class="container-fluid" id="content">
+<div class="container">
+
+    <form class="needs-validation" novalidate>
+      <div class="row">
+
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Payment information</span>
+          </h4>
+          <div class="mb-3">
+            <label>Account holder name</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="username" placeholder="" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                please enter name of account holder
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="title">Account number</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="username" placeholder="" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Product account number
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-6">
+              <label for="title">Branch</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="username" placeholder="" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Please enter branch
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-6">
+              <label for="state">IFSC number</label>
+              <input type="text" class="form-control" id="weight" placeholder="">
+              <div class="invalid-feedback">
+                Please enter IFSC number
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-8 order-md-1">
+          <!-- <h4 class="mb-3">Billing address</h4> -->
+
+          <div class="row">
+            <div class="col-md-6 mb-6">
+              <label for="state">First name</label>
+              <input type="text" class="form-control" id="weight" placeholder="First name">
+              <div class="invalid-feedback">
+                Please enter first name
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-6">
+              <label for="state">Last name</label>
+              <input type="text" class="form-control" id="weight" placeholder="Last name">
+              <div class="invalid-feedback">
+                Please enter last name
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="description" required>Address </label>
+            <textarea class="form-control" id="address"></textarea>
+            <div class="invalid-feedback">
+              Please enter your address
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <label for="state">City</label>
+              <input type="text" class="form-control" id="weight" placeholder="City">
+              <div class="invalid-feedback">
+                Please enter City name
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <label for="state">Country/Region</label>
+              <input type="text" class="form-control" id="weight" placeholder="Country/Region">
+              <div class="invalid-feedback">
+                Please enter Country/Region
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <label for="state">Pin</label>
+              <input type="text" class="form-control" id="weight" placeholder="Pin">
+              <div class="invalid-feedback">
+                Please enter Pincode
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-6">
+              <label for="title">Phone</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="username" placeholder="Phone number" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Please enter your phone number
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-6">
+              <label for="state">Email</label>
+              <input type="email" class="form-control" id="weight" placeholder="Email id">
+              <div class="invalid-feedback">
+                Please enter email
+              </div>
+            </div>
+          </div>
+
+          <hr class="mb-4">
+          <button class="btn btn-success btn-lg btn-block" type="submit" data
+            data-dismiss="modal">Save</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock main-content %}
