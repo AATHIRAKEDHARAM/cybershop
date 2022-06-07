@@ -7,7 +7,9 @@
     <div class="container-fluid" id="content">
 <div class="container">
 
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" method="POST">
+      {% csrf_token %}
+    
       <div class="row">
 
         <div class="col-md-4 order-md-2 mb-4">
@@ -17,7 +19,7 @@
           <div class="mb-3">
             <label>Account holder name</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="username" placeholder="" required>
+              <input type="text" class="form-control" id="username" name="acc_name" placeholder="" required>
               <div class="invalid-feedback" style="width: 100%;">
                 please enter name of account holder
               </div>
@@ -26,7 +28,7 @@
           <div class="mb-3">
             <label for="title">Account number</label>
             <div class="input-group">
-              <input type="text" class="form-control" id="username" placeholder="" required>
+              <input type="text" class="form-control" id="username" name="acc_number" placeholder="" required>
               <div class="invalid-feedback" style="width: 100%;">
                 Product account number
               </div>
@@ -36,7 +38,7 @@
             <div class="col-md-6 mb-6">
               <label for="title">Branch</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="username" placeholder="" required>
+                <input type="text" class="form-control" id="username" placeholder="" name="branch"  required>
                 <div class="invalid-feedback" style="width: 100%;">
                   Please enter branch
                 </div>
@@ -45,12 +47,13 @@
 
             <div class="col-md-6 mb-6">
               <label for="state">IFSC number</label>
-              <input type="text" class="form-control" id="weight" placeholder="">
+              <input type="text" class="form-control" id="weight" name="ifsc" placeholder="">
               <div class="invalid-feedback">
                 Please enter IFSC number
               </div>
             </div>
           </div>
+          
 
         </div>
 
@@ -60,7 +63,7 @@
           <div class="row">
             <div class="col-md-6 mb-6">
               <label for="state">First name</label>
-              <input type="text" class="form-control" id="weight" placeholder="First name">
+              <input type="text" class="form-control" id="weight" name="first_name" placeholder="First name">
               <div class="invalid-feedback">
                 Please enter first name
               </div>
@@ -68,7 +71,7 @@
 
             <div class="col-md-6 mb-6">
               <label for="state">Last name</label>
-              <input type="text" class="form-control" id="weight" placeholder="Last name">
+              <input type="text" class="form-control" id="weight" name="last_name" placeholder="Last name">
               <div class="invalid-feedback">
                 Please enter last name
               </div>
@@ -76,7 +79,7 @@
           </div>
           <div class="mb-3">
             <label for="description" required>Address </label>
-            <textarea class="form-control" id="address"></textarea>
+            <textarea class="form-control" name="address" id="address"></textarea>
             <div class="invalid-feedback">
               Please enter your address
             </div>
@@ -84,7 +87,7 @@
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="state">City</label>
-              <input type="text" class="form-control" id="weight" placeholder="City">
+              <input type="text" class="form-control" id="weight" name="city" placeholder="City">
               <div class="invalid-feedback">
                 Please enter City name
               </div>
@@ -92,14 +95,14 @@
 
             <div class="col-md-4 mb-4">
               <label for="state">Country/Region</label>
-              <input type="text" class="form-control" id="weight" placeholder="Country/Region">
+              <input type="text" class="form-control" id="weight" name="country" placeholder="Country/Region">
               <div class="invalid-feedback">
                 Please enter Country/Region
               </div>
             </div>
             <div class="col-md-4 mb-4">
               <label for="state">Pin</label>
-              <input type="text" class="form-control" id="weight" placeholder="Pin">
+              <input type="text" class="form-control" id="weight" name="pin" placeholder="Pin">
               <div class="invalid-feedback">
                 Please enter Pincode
               </div>
@@ -109,7 +112,7 @@
             <div class="col-md-6 mb-6">
               <label for="title">Phone</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="username" placeholder="Phone number" required>
+                <input type="text" class="form-control" id="username" name="phone" placeholder="Phone number" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   Please enter your phone number
                 </div>
@@ -118,16 +121,24 @@
 
             <div class="col-md-6 mb-6">
               <label for="state">Email</label>
-              <input type="email" class="form-control" id="weight" placeholder="Email id">
+              <input type="email" class="form-control" id="weight" name="email" placeholder="Email id">
               <div class="invalid-feedback">
                 Please enter email
               </div>
             </div>
           </div>
 
+          <div class="col-md-6 mb-6">
+            <label for="title">Password</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="password" name="password" placeholder="" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Password
+              </div>
+            </div>
+
           <hr class="mb-4">
-          <button class="btn btn-success btn-lg btn-block" type="submit" data
-            data-dismiss="modal">Save</button>
+          <button class="btn btn-success btn-lg btn-block" type="submit">Save</button>
 
         </div>
       </div>
