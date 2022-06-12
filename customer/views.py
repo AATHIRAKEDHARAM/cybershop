@@ -10,3 +10,6 @@ def products(request):
 
 def profile(request):
     return render(request,'customer/profile.html')
+    
+def payment(request):
+    return render(request,'customer/payment.html')

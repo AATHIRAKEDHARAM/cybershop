@@ -1,393 +1,213 @@
 {% load static %}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="{% static 'seller_static/css/seller_home.css' %}">
-  <link href="{% static 'seller_static/css/seller_home.css' %}" rel="stylesheet">
-  <link href="{% static 'seller_static/css/seller_footer.css' %}" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-    crossorigin="anonymous"></script>
-
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Seller | {% block title %} {% endblock title %}</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css" />
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'assets/vendors/jvectormap/jquery-jvectormap.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/vendors/flag-icon-css/css/flag-icon.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel-2/owl.carousel.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/vendors/owl-carousel-2/owl.theme.default.min.css' %}" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" />
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="/">CYBERSHOP FOR SELLER</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0 font-weight-bold">
-
-
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btn btn-warning" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-expanded="false" style="margin-right: 2em;">
-              <button class="btn btn-priMARY " type="submit">S</button> +SELL PRODUCTS
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#sesign">Sign In</a>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#secreate">Create An account</a>
-
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo " style="color: white; text-decoration: none;"
+          href="{% url 'seller:home' %}">SELLER</a>
+        <a class="sidebar-brand brand-logo-mini" style="color: white; text-decoration: none;"
+          href="{% url 'seller:home' %}">S</a>
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile">
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <div class="count-indicator">
+                <img class="img-xs rounded-circle" src="{% static 'assets/images/faces/face15.jpg' %}" alt="" />
+                <span class="count bg-success"></span>
+              </div>
+              <div class="profile-name">
+                <h5 class="mb-0 font-weight-normal">AATHIRA</h5>
+              </div>
             </div>
-          </li>
-        </ul>
-      </div> -->
-  </nav>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{% url 'seller:home' %}">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{% url 'seller:product' %}">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">All Product</span>
+          </a>
+        </li>
 
-  <!-- 
-  <div class="container">
-    <div class="modal fade" id="secreate">
-      <div class="modal-dialog">
-        <div class="modal-content " style="width: 160%;">
-          <div class="modal-header ">
-            <h5 class="modal-title text-center text-dark" id="exampleModalLabel"
-              style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Creare An
-              Account
-            </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body " style="background-color: #fafafa;">
-            <div id="page-content-wrapper">
-              <div class="container-fluid" id="content">
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{% url 'seller:add' %}">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Add Product</span>
+          </a>
+        </li>
 
-                <div class="container">
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="{% url 'seller:edit' %}">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Edit Product</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-                  <form class="needs-validation" novalidate>
-                    <div class="row">
 
-                      <div class="col-md-4 order-md-2 mb-4">
-                        <h4 class="d-flex justify-content-between align-items-center mb-3">
-                          <span class="text-muted">Payment information</span>
-                        </h4>
-                        <div class="mb-3">
-                          <label>Account holder name</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" id="username" placeholder="" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                              please enter name of account holder
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="title">Account number</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" id="username" placeholder="" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                              Product account number
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 mb-6">
-                            <label for="title">Branch</label>
-                            <div class="input-group">
-                              <input type="text" class="form-control" id="username" placeholder="" required>
-                              <div class="invalid-feedback" style="width: 100%;">
-                                Please enter branch
-                              </div>
-                            </div>
-                          </div>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="{% url 'seller:home' %}"><img
+              src="{% static 'assets/images/logo-mini.svg' %}" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                <input type="text" class="form-control" placeholder="Search products">
+              </form>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
 
-                          <div class="col-md-6 mb-6">
-                            <label for="state">IFSC number</label>
-                            <input type="text" class="form-control" id="weight" placeholder="">
-                            <div class="invalid-feedback">
-                              Please enter IFSC number
-                            </div>
-                          </div>
-                        </div>
 
-                      </div>
-
-                      <div class="col-md-8 order-md-1">
-                        <h4 class="mb-3">Billing address</h4>
-
-                        <div class="row">
-                          <div class="col-md-6 mb-6">
-                            <label for="state">First name</label>
-                            <input type="text" class="form-control" id="weight" placeholder="First name">
-                            <div class="invalid-feedback">
-                              Please enter first name
-                            </div>
-                          </div>
-
-                          <div class="col-md-6 mb-6">
-                            <label for="state">Last name</label>
-                            <input type="text" class="form-control" id="weight" placeholder="Last name">
-                            <div class="invalid-feedback">
-                              Please enter last name
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="description" required>Address </label>
-                          <textarea class="form-control" id="address"></textarea>
-                          <div class="invalid-feedback">
-                            Please enter your address
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-4 mb-4">
-                            <label for="state">City</label>
-                            <input type="text" class="form-control" id="weight" placeholder="City">
-                            <div class="invalid-feedback">
-                              Please enter City name
-                            </div>
-                          </div>
-
-                          <div class="col-md-4 mb-4">
-                            <label for="state">Country/Region</label>
-                            <input type="text" class="form-control" id="weight" placeholder="Country/Region">
-                            <div class="invalid-feedback">
-                              Please enter Country/Region
-                            </div>
-                          </div>
-                          <div class="col-md-4 mb-4">
-                            <label for="state">Pin</label>
-                            <input type="text" class="form-control" id="weight" placeholder="Pin">
-                            <div class="invalid-feedback">
-                              Please enter Pincode
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6 mb-6">
-                            <label for="title">Phone</label>
-                            <div class="input-group">
-                              <input type="text" class="form-control" id="username" placeholder="Phone number" required>
-                              <div class="invalid-feedback" style="width: 100%;">
-                                Please enter your phone number
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-6 mb-6">
-                            <label for="state">Email</label>
-                            <input type="email" class="form-control" id="weight" placeholder="Email id">
-                            <div class="invalid-feedback">
-                              Please enter email
-                            </div>
-                          </div>
-                        </div>
-
-                        <hr class="mb-4">
-                        <button class="btn btn-success btn-lg btn-block" type="submit" data
-                          data-dismiss="modal">Save</button>
-
-                      </div>
-                    </div>
-                  </form>
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="{% static 'assets/images/faces/face15.jpg '%}" alt="">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">AATHIRA</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
-
-
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Log out</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">Advanced settings</p>
               </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-between mx-2"> -->
-
-  <!-- <div class="order-total">ORDER TOTAL</div>
-     
-              <div class="order-price"> <h6 class="card-text text-center"><i class="fa-solid fa-indian-rupee-sign"></i>520 </h6></div>
-             </div>
-              <div class="checkout text-center"><input type="submit" class="btn btn-lg bg-secondary" value="CONTINUE TO CHECKOUT"></div>
-             </div> -->
-  <!-- 
-            </div>
-          </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
         </div>
-      </div>
-    </div>
-  </div> -->
+      </nav>
 
 
 
-  <!-- 
-  <div class="container">
+      <div class="main-panel">
+        <div class="content-wrapper">
 
-    <div class="modal fade" id="sesign" t>
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header ">
-            <h5 class="modal-title text-center text-dark" id="exampleModalLabel"
-              style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Sign In</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body  ">
-            <form action="">
-              <div class="form-group ">
-
-                <input type="email" placeholder="Email address" class="form-control-lg w-100"
-                  id="exampleFormControlInput1">
-              </div>
-              <div class="form-group ">
-
-                <input type="password" placeholder="password" class="form-control-lg w-100 "
-                  id="exampleFormControlInput1">
-              </div>
-              <div class="form-group text-center text-dark">
-                <a href="" class=" text-dark" data-target="#forgotpassword" data-toggle="modal"
-                  data-dismiss="modal">Forgot Password?</a>
-              </div>
-              <div class="form-group ">
-                <button type="button" class="btn btn-success btn-lg btn-block">Sign In</button>
-              </div>
-              <div class="form-group ">
-                <button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-toggle="modal"
-                  data-target="#secreate" data-dismiss="modal">Create An Account</button>
-              </div>
-            </form>
-            <div class="modal-footer ">
-              <p>By Signing in or creating an account you are agreeing to our <br><a href="">Terms Of Use</a>and our <a
-                  href="">privacy policy</a></p>
-
-            </div>
-
-          </div>
+          
+              {% block content %}
+              dfghjk
+              {% endblock %}
+           
         </div>
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © aathira.com
+              2022</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Designed by Aathira Kedharam
+            </span>
+          </div>
+        </footer>
       </div>
+
+
+      <!-- partial:partials/_footer.html -->
+
+
+
+
+
     </div>
   </div>
-
-
-  <div class="container">
-    <div class="modal fade" id="forgotpassword" t>
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header ">
-            <h5 class="modal-title text-center text-dark" id="exampleModalLabel"
-              style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Forgot Password
-            </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body  " style="background-color: #fafafa;">
-            <form action="">
-              <div class="form-group ">
-                <p>To reset the password,enter the email address associated with your account</p>
-
-                <input type="email" placeholder="Email address" class="form-control-lg w-100"
-                  id="exampleFormControlInput1">
-              </div>
-
-              <div class="form-group ">
-                <button type="button" class="btn btn-success btn-lg " data-toggle="modal" data-target="#verifyOTP"
-                  data-dismiss="modal">Send OTP</button>
-
-
-                <button type="button" class="btn btn-secondary btn-lg " data-dismiss="modal">Cancel</button>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-  <div class="container">
-    <div class="modal fade" id="verifyOTP">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header ">
-            <h5 class="modal-title text-center text-dark" id="exampleModalLabel"
-              style="font-family: 'Courier New', Courier, monospace;font-size:28px; font-weight: bold;">Verify OTP</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body  " style="background-color: #fafafa;">
-            <form action="">
-              <div class="form-group ">
-                <p>otp send to your email</p>
-
-                <input type="text" placeholder="Enter otp" class="form-control-lg w-100" id="exampleFormControlInput1">
-              </div>
-
-              <div class="form-group ">
-                <button type="button" class="btn btn-success btn-lg ">Verify OTP</button>
-
-
-                <button type="button" class="btn btn-secondary btn-lg " data-dismiss="modal">Cancel</button>
-              </div>
-              <div class="form-group ">
-                <a href="">Resend OTP</a>
-              </div>
-            </form>
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="d-flex" id="wrapper" style="margin-top:7em;">
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="theme-color list-group list-group-flush">
-        <a href="{% url 'home' %}" class="bg-light list-group-item list-group-item-action font-weight-bold"
-          id="home">Home</a>
-        <a href="{% url 'product' %}" class="bg-light list-group-item list-group-item-action font-weight-bold"
-          id="products">All Products</a>
-        <a href="{% url 'add' %}" class="bg-light list-group-item list-group-item-action font-weight-bold"
-          id="addProduct">Add a product</a>
-        <a href="{% url 'edit' %}" class="bg-light list-group-item list-group-item-action font-weight-bold">edit
-          product</a>
-
-      </div>
-    </div>
-
-    <!-- /#sidebar-wrapper -->
-    <!-- Page Content -->
-
-
-
-
-    <div id="page-content-wrapper">
-      <div class="container-fluid text-left" id="content">
-        <!-- <h1>SELL BOOK ONLINE ON ONLINE BOOK STORE</h1> -->
-        {% block content %}
-        {% endblock %}
-      </div>
-    </div>
-
-  </div>
-  <!-- Start Footer -->
-  <footer class="container-fluid bg-dark text-center p-2 mt-5">
-    <small class="text-white">Copyright &copy; 2022 || Designed by aathirakedaharam || </small>
-    <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
-  </footer> <!-- End Footer -->
-
+  <!-- plugins:js -->
+  <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{% static 'assets/vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'assets/vendors/progressbar.js/progressbar.min.js' %}"></script>
+  <script src="{% static 'assets/vendors/jvectormap/jquery-jvectormap.min.js' %}"></script>
+  <script src="{% static 'assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+  <script src="{% static 'assets/vendors/owl-carousel-2/owl.carousel.min.js' %}"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{% static 'assets/js/off-canvas.js' %}"></script>
+  <script src="{% static 'assets/js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'assets/js/misc.js' %}"></script>
+  <script src="{% static 'assets/js/settings.js' %}"></script>
+  <script src="{% static 'assets/js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page -->
+  <script src="{% static 'assets/js/dashboard.js' %}"></script>
+  <!-- End custom js for this page -->
 </body>
 
 </html>

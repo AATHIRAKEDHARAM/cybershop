@@ -1,48 +1,65 @@
 {% extends 'admin/master.html' %}
 {% load static %}
+{% block title %}Add Category{% endblock title %}
 {% block content %}
 
- <div class="col-md-10 " style="margin-left: 227px;background-color: #blue"> 
-     <div class="container mt-4 " style="border: 1px solid black;">
-         
-        
-          <div class=" text-left">
-            
-            <h2 nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container">Add Category</h2>
-            <hr>
+<div class="container mt-4 " style="border: 1px solid black;">
+    <div class="row">
+
+        <div class="col-md-12 " style="background-color: #fbfcff">
+
+            <nav class="navbar-dark bg-primary mt-3 p-3">
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <h2>ADD CATEGORY</h2>
+
+                    </div>
+                    <div class="col-md-2">
+                        <button class="navbar-toggler " style="margin-left: 100px;" type="button" data-toggle="collapse"
+                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </nav>
+            <hr style="background-color: black;">
+
+            <div class="row">
+                <div class="col-md-8 order-md-1">
+                    <form class="needs-validation" novalidate enctype="multipart/form-data" id="add_product"
+                        onload="resetSelection();">
+                        <div class="mb-3">
+                            <label for="title">Title</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="title" placeholder="Title of the PRODUCT"
+                                    required>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description">Description </label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="description" required></textarea>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="mb-3">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-8 order-md-1">
-                <form class="needs-validation" novalidate enctype="multipart/form-data" id="add_product" onload="resetSelection();">
-                    <div class="mb-3">
-                        <label for="title">Title</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="title" placeholder="Title of the PRODUCT" required>
-                            
-                        </div>
-                    </div>
-                 
-                    <div class="mb-3">
-                        <label for="description">Description </label>
-                        <div class="input-group">
-                            <textarea class="form-control" id="description" required></textarea>
-                            
-                        </div>
-                    </div>
-                   
-          
-       
-                       
-                    
-        
-                    <div class="mb-3">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Add</button>
-                    </div>
-                </form>
-            </div>
-            </div>
-          </div>
     </div>
 </div>
 

@@ -1,6 +1,11 @@
-{% extends "seller/seller_master.html" %} {% load static %} {% block seller_content %}
+{% extends "seller/seller_master.html" %}
+ {% load static %} 
+ {% block title %} All Product {% endblock title %}
+ {% block content %}
+
+
 <script src="{% static 'seller/scripts/delete_product.js' %}"></script>
-<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+<nav class=" navbar-dark bg-light">
     <div class="container">
         <a class="navbar-brand text-dark font-weight-bold" href="#">Products</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -8,7 +13,7 @@
         <button class="btn btn-primary" id="menu-toggle">Add product</button>
     </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+<nav class=" navbar-expand-lg navbar-dark bg-light">
     <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
@@ -41,7 +46,7 @@
     </div>
 </nav>
 <div class="row text-center" style="padding-top: 26pt;">
-    {% for product in products %}
+   
     <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
             <img class="card-img-top" src="/media/{{ product.img }}">
@@ -57,6 +62,6 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    
 </div>
 {% endblock %}

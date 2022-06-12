@@ -1,13 +1,24 @@
 {% extends 'admin/master.html' %}
 {% load static %}
+{% block title %}Order List{% endblock title %}
 {% block content %}
 
 
-<div class="col-md-10" style="margin-left: 223px;background-color: #fbfcff">
-    <div class="container mt-4" style="border: 1px solid black;">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-     <h3>ORDER LIST</h3>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<div class="container mt-4" style="border: 1px solid black;">
+  <div class="row">
+
+    <div class="col-md-12" style="background-color: #fbfcff">
+      <nav class="navbar-dark bg-primary mt-3 p-3">
+        <div class="row">
+          <div class="col-md-10">
+
+
+
+            <h3>ORDER LIST</h3>
+          </div>
+          <div class="col-md-2">
+            <button class="navbar-toggler" style="margin-left: 100px;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -23,129 +34,136 @@
                 </li>
               </ul>
             </div> -->
-          </nav>
-          <hr style="background-color: black;">
-          <div class="row">
-              <div class="col-md-4 mt-2 ">
-                  <label for="" >show</label>
-                  <select name="" id="">
-                    <option value="">5</option>
-                      <option value="">10</option>
-                      <option value="">25</option>
-                      <option value="">50</option>
-                      <option value="">100</option>
-                  </select>
-                  <label for="">entries</label>
-              </div>
-             <div class="col-md-5"></div>
-             <div class="col-md-3 ">
-                 <label for="">search</label>
-                 <input type="text" class="">
-                 
-             </div>
-             
           </div>
+        </div>
+      </nav>
+      <hr style="background-color: black;">
+      <div class="row">
+        <div class="col-md-4 mt-2 ">
+          <label for="">show</label>
+          <select name="" id="">
+            <option value="">5</option>
+            <option value="">10</option>
+            <option value="">25</option>
+            <option value="">50</option>
+            <option value="">100</option>
+          </select>
+          <label for="">entries</label>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-3 ">
+          <label for="">search</label>
+          <input type="text" class="">
 
-          <table class="table table-striped table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">No</th>
-                <th scope="col">ID</th>
-                <th scope="col">PRODUCT </th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">PAYMENT-info</th>
-                <th scope="col">PRICE</th>
-                <th scope="col">STATUS</th>
-                <th scope="col">ACTION</th>
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>ORDERID1234</td>
+        </div>
 
-                <td>TSHIRT</td>
-                <td>AATHIRA</td>
-                <td>CASH ON DELIVERY</td>
+      </div>
 
-                <td>400</td>
-                <td><a href="" class="btn btn-success">completed</a> </td>
-                <td> <a href="" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a><br><br>
-                <a href="" class="btn btn-primary"  ><i class="fa-solid fa-trash"></i></a></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>ORDERID1234</td>
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">ID</th>
+            <th scope="col">PRODUCT </th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">PAYMENT-info</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">ACTION</th>
 
-                <td>TSHIRT</td>
-                <td>CHINNU</td>
-                <td>CASH ON DELIVERY</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>ORDERID1234</td>
 
-                <td>400</td>
-                <td><a href="" class="btn btn-success">completed</a> </td>
-               
-               
-               
-                <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
-                <a href="" class="btn btn-primary"  ><i class="fa-solid fa-trash"></i></a></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                
-                <td>ORDERID123</td>
+            <td>TSHIRT</td>
+            <td>AATHIRA</td>
+            <td>CASH ON DELIVERY</td>
 
-                <td>PERFUME</td>
-                <td>ARJUN</td>
-                <td>ONLINE</td>
+            <td>400</td>
+            <td><a href="" class="btn btn-success">completed</a> </td>
+            <td> <a href="" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a><br><br>
+              <a href="" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>ORDERID1234</td>
 
-                <td>400</td>
-                <td><a href="" class="btn btn-warning">progress</a> </td>
-                <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
-                <a href="" class="btn btn-PRIMARY"  ><i class="fa-solid fa-trash"></i></a></td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>ORDERID123</td>
+            <td>TSHIRT</td>
+            <td>CHINNU</td>
+            <td>CASH ON DELIVERY</td>
 
-                <td>TSHIRT</td>
-                <td>AISHU</td>
-                <td>CASHONDELIVARY</td>
+            <td>400</td>
+            <td><a href="" class="btn btn-success">completed</a> </td>
 
-                <td>400</td>
-                <td><a href="" class="btn btn-success">completed</a> </td>
-                <td> <a href="" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a><br><br>
-                <a href="" class="btn btn-PRIMARY"  ><i class="fa-solid fa-trash"></i></a></td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>ORDER123</td>
 
-                <td>TSHIRT</td>
-                <td>AATHIRA</td>
-                <td>ONLINE</td>
 
-                <td>400</td>
-                <td><a href="" class="btn btn-success">completed</a> </td>
-                <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
-                <a href="" class="btn btn-PRIMARY"  ><i class="fa-solid fa-trash"></i></a></td>
-              </tr>
-            </tbody>
+            <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
+              <a href="" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+
+            <td>ORDERID123</td>
+
+            <td>PERFUME</td>
+            <td>ARJUN</td>
+            <td>ONLINE</td>
+
+            <td>400</td>
+            <td><a href="" class="btn btn-warning">progress</a> </td>
+            <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
+              <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>ORDERID123</td>
+
+            <td>TSHIRT</td>
+            <td>AISHU</td>
+            <td>CASHONDELIVARY</td>
+
+            <td>400</td>
+            <td><a href="" class="btn btn-success">completed</a> </td>
+            <td> <a href="" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a><br><br>
+              <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>ORDER123</td>
+
+            <td>TSHIRT</td>
+            <td>AATHIRA</td>
+            <td>ONLINE</td>
+
+            <td>400</td>
+            <td><a href="" class="btn btn-success">completed</a> </td>
+            <td> <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-pen"></i></a><br><br>
+              <a href="" class="btn btn-PRIMARY"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="row">
+        <div class="col-md-3 mt-2">
+          <h6>showing 1 to 5 entries</h6>
+        </div>
+        <div class="col-md-7"></div>
+        <div class="col-md-2 mt-1">
+          <table class="table-bordered " width="100%">
+            <th><a href="" class="text-dark"> Previous</a></th>
+            <th><a href="">1</a></th>
+            <th><a href="" class="text-dark"> Next</a></th>
           </table>
-          <div class="row">
-            <div class="col-md-3 mt-2">
-              <h6>showing 1 to 5 entries</h6>
-            </div>
-            <div class="col-md-7"></div>
-            <div class="col-md-2 mt-1">
-            <table class="table-bordered " width="100%">
-              <th><a href="" class="text-dark"> Previous</a></th>
-              <th><a href="">1</a></th>
-              <th><a href="" class="text-dark"> Next</a></th>
-            </table>
 
-            </div>
-          </div>
+        </div>
+      </div>
     </div>
-
-    {% endblock %}
+  </div>
+  {% endblock %}

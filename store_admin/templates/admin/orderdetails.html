@@ -1,309 +1,323 @@
-
 {% extends 'admin/master.html' %}
 {% load static %}
+{% block title %}Order Details{% endblock title %}
 {% block content %}
 
 
-<div class="col-md-10" style="margin-left: 223px;background-color: #fbfcff;" >
-    <div class="container mt-4" style="border: 1px solid black;">
-    
-          <div class="ROW">
-            
-              <div class="COL-MD-6 mt-1">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                  <div class="container">
-                <h3 >ORDER DETAILS</h3>
-              </div>
-              <div class="col-md-3"></div>
-              <div class="cpl-md-3 mt-2">
-                  <select name="" id="" style="width: 210px;height: 44px;">
-                      <option value=""> <h4> select order id </h4></option>
-                      <option value="">order-7813</option>
-                      <option value="">order-7815</option>
-                      <option value="">order-7817</option>
-                      <option value="">order-7821</option>
+<div class="container mt-4" style="border: 1px solid black;">
+  <div class="row">
 
-
-
-
-                  </select>
-              </div>
-          </div>
-          <hr style="background-color: black;">
-          <div class="row">
-       
-             <div class="col-md-3">
-                <div class="card " style="background-color: blue;">
-                    <i class="fa-solid fa-cart-shopping fa-2x" style="margin-top:1em;"></i>
-                  <div class="card-body" style="
-                  margin-top: -65px; margin-left: 20px
-              ;">
-                
-                
-                <p style="font-size: 20px;
-                font-weight: bold;;">Order Created At</p>
-                  <h6>12/03/2022 at 4.23pm</h6>
-                </div>
-                </div>
-
-             </div>
-             <div class="col-md-3">
-                <div class="card " style="background-color:  blue;">
-                    <i class="fa-solid fa-user-circle fa-2x" style="margin-top:1em;"></i>
-                  <div class="card-body" style="
-                  margin-top: -65px; margin-left: 20px
-              ;">
-               <h4>Name:</h4>
-                  <h5>AATHIRA</h5>
-                </div>
-                </div>
-
-             </div>
-             <div class="col-md-3">
-                <div class="card " style="background-color:blue">
-                    <i class="fa-solid fa-envelope fa-2x" style="margin-top:1em;"></i>
-                  <div class="card-body" style="
-                  margin-top: -65px; margin-left: 20px
-              ;">
-                  <h4>Email</h4>
-                  <h5>aathirakedharam@gmail.com</h5>
-                </div>
-                </div>
-
-             </div>
-             <div class="col-md-3">
-                <div class="card " style="background-color: blue;">
-                    <i class="fa-solid fa-phone fa-2x" style="margin-top:1em;"></i>
-                  <div class="card-body" style="
-                  margin-top: -65px; margin-left: 20px
-              ;">
-                  <h4>mobile No</h4>
-                  <h5>9846622609</h5>
-                </div>
-                </div>
-
-             </div>
-             <div class="col-md-4 mt-3">
-                <div class="card ">
-                 <h4>Delivery Address</h4>
-                  <div class="card-body">
-                 <div class="row">
-                     <div class="col-md-6">
-                         <h5>Address:</h5>
-                     </div>
-                     <div class="col-md-6">
-                        <h5>Kozhikode,kozhikode</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Pincode:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>673019</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Contact No:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>9061537844</h5>
-                    </div>
-                 </div>
-                </div>
-                </div>
-             </div>
-        
-             <div class="col-md-4 mt-3">
-                <div class="card ">
-                 <h4>Billing Address</h4>
-                  <div class="card-body">
-                 <div class="row">
-                     <div class="col-md-6">
-                         <h5>Address:</h5>
-                     </div>
-                     <div class="col-md-6">
-                        <h5>Koyilandy,kozhikode</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Pincode:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>673019</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>contact no:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>9061537844</h5>
-                    </div>
-                 </div>
-                </div>
-                </div>
-             </div>
-             <div class="col-md-4 mt-3">
-                <div class="card ">
-                 <h4>Invoice Details</h4>
-                  <div class="card-body">
-                 <div class="row">
-                     <div class="col-md-6">
-                         <h5>Address:</h5>
-                     </div>
-                     <div class="col-md-6">
-                        <h5>Koyilandy,kozhikode</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Pincode:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>673019</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Contact No:</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>9061537844</h5>
-                    </div>
-                 </div>
-                </div>
-                </div>
-             </div>
-          </div>
-          <div class="container" style="margin-top: 5em;border:1px solid black">
-                <div class="row">
-           <div class="co1-md-12">
-               <H4>ORDER SUMMARY</H4>
-            <table class="table table-striped table-bordered table-fluid" style="width: 229%;">
-                <thead>
-                  <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Product Image</th>
-                    <th scope="col">product  Name</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
-                  
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><div><img src="{% static 'images/ad.jpg' %}" alt=""  class="img-fluid img-thumbnail shadow-sm" height="80" width="80"></div></td>
-                    <td>TSHIRT</td>
-                    <td>1</td>
-                    <td>400</td>
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                   
-                    <td><div><img src="{% static 'images/ad2.webp' %}" alt=""  class="img-fluid img-thumbnail shadow-sm" height="80" width="80"></div></td>
-                    <td>MEN'S PERFUME</td>
-                    <td>3</td>
-                    <td>1100</td>
-                   
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    
-                    <td><div><img src="{% static 'images/ad3.webp' %}" alt=""  class="img-fluid img-thumbnail shadow-sm" height="80" width="80"></div></td>
-                    <td>LIPSTICK</td>
-                    <td>2</td>
-                    <td>500</td>
-                   
-                  </tr>
-                 
-                </tbody>
-            </table>
-           
-         
-
-          </div>
-          </div>
+    <div class="col-md-12" style="background-color: #fbfcff;">
+      <nav class="navbar-dark bg-primary mt-3 p-3">
+      <div class="row">
+        <div class="col-md-9 mt-1">
           
-          <div class="row">
+            <h3>ORDER DETAILS</h3>
+
+        </div>
+
+
+        <div class="col-md-3 mt-2">
+          <select name="" id="" style="width: 210px;height: 44px;">
+            <option value="">
+              <h4> select order id </h4>
+            </option>
+            <option value="">order-7813</option>
+            <option value="">order-7815</option>
+            <option value="">order-7817</option>
+            <option value="">order-7821</option>
+
+          </select>
+        </div>
+        
+
+      </div>
+    </nav>
+
+      <hr style="background-color: black;">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="card " style="background-color: blue;">
+            <i class="fa-solid fa-cart-shopping fa-2x" style="margin-top:1em;"></i>
+            <div class="card-body" style="
+                  margin-top: -65px; margin-left: 20px;">
+
+
+              <p style="font-size: 20px;
+                font-weight: bold;;">Order Created At</p>
+              <h6>12/03/2022 at 4.23pm</h6>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="card " style="background-color:  blue;">
+            <i class="fa-solid fa-user-circle fa-2x" style="margin-top:1em;"></i>
+            <div class="card-body" style="
+                  margin-top: -65px; margin-left: 20px
+              ;">
+              <h4>Name:</h4>
+              <h5>AATHIRA</h5>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="card " style="background-color:blue">
+            <i class="fa-solid fa-envelope fa-2x" style="margin-top:1em;"></i>
+            <div class="card-body" style="
+                  margin-top: -65px; margin-left: 20px
+              ;">
+              <h4>Email</h4>
+              <h5>aathirakedharam@gmail.com</h5>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="card " style="background-color: blue;">
+            <i class="fa-solid fa-phone fa-2x" style="margin-top:1em;"></i>
+            <div class="card-body" style="
+                  margin-top: -65px; margin-left: 20px
+              ;">
+              <h4>mobile No</h4>
+              <h5>9846622609</h5>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card ">
+            <h4>Delivery Address</h4>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Address:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Kozhikode,kozhikode</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Pincode:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>673019</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Contact No:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>9061537844</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+          <div class="card ">
+            <h4>Billing Address</h4>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Address:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Koyilandy,kozhikode</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Pincode:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>673019</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>contact no:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>9061537844</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card ">
+            <h4>Invoice Details</h4>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5>Address:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Koyilandy,kozhikode</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Pincode:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>673019</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>Contact No:</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>9061537844</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 5em;border:1px solid black">
+        <div class="row">
+          <div class="co1-md-12">
+            <H4>ORDER SUMMARY</H4>
+            <table class="table table-striped table-bordered table-fluid" style="width: 229%;">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Product Image</th>
+                  <th scope="col">product Name</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <div><img src="{% static 'images/ad.jpg' %}" alt="" class="img-fluid img-thumbnail shadow-sm"
+                        height="80" width="80"></div>
+                  </td>
+                  <td>TSHIRT</td>
+                  <td>1</td>
+                  <td>400</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+
+                  <td>
+                    <div><img src="{% static 'images/ad2.webp' %}" alt="" class="img-fluid img-thumbnail shadow-sm"
+                        height="80" width="80"></div>
+                  </td>
+                  <td>MEN'S PERFUME</td>
+                  <td>3</td>
+                  <td>1100</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+
+                  <td>
+                    <div><img src="{% static 'images/ad3.webp' %}" alt="" class="img-fluid img-thumbnail shadow-sm"
+                        height="80" width="80"></div>
+                  </td>
+                  <td>LIPSTICK</td>
+                  <td>2</td>
+                  <td>500</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-6"></div>
           <div class="col-md-6">
             <div class=" text-center" style="border: 1px solid black; height: 300px;height: 206px;margin-left: 9em;">
-                <h3>Order Summary</h3>
-                <div class="d-flex justify-content-between">
-             <div>Sub Total</div>
-             <div><i class="fa-solid fa-indian-rupee-sign"></i>260</div>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div>Estimated tax</div>
-                  <div><i class="fa-solid fa-indian-rupee-sign"></i>0.00</div>
-                     </div>
-                     <hr>
-                     <div class="d-flex justify-content-between">
-                      <div>Total</div>
-                      <div><i class="fa-solid fa-indian-rupee-sign"></i>260.00</div>
-                         </div>
-                     
-                     <button class="btn btn-block bg-primary" type="submit">SUBMIT</button>
-              
+              <h3>Order Summary</h3>
+              <div class="d-flex justify-content-between">
+                <div>Sub Total</div>
+                <div><i class="fa-solid fa-indian-rupee-sign"></i>260</div>
               </div>
-            </div>
-          </div>
-          </div>
+              <div class="d-flex justify-content-between">
+                <div>Estimated tax</div>
+                <div><i class="fa-solid fa-indian-rupee-sign"></i>0.00</div>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between">
+                <div>Total</div>
+                <div><i class="fa-solid fa-indian-rupee-sign"></i>260.00</div>
+              </div>
 
-          <div class="container" style="border: 1px solid black;margin-top: 5em;">
-            <div class="row">
-              <div class="col-md-8 order-md-1">
-                <form class="needs-validation" novalidate enctype="multipart/form-data" id="add_product" onload="resetSelection();">
-                  <h4>Order Status</h4>
-                  <br><br>
-                    <div class="mb-3">
-                        <label for="title">Order ID</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="title" placeholder="7814" required>
-                            
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="regproductid">Order Status</label>
-                        <select class="custom-select d-block w-100 form-control" id="orderstatus" required>
-                          <option value="">Pending</option>
-                          <option>Progress</option>
-                          <option>Completed</option>
-                          
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="description">Quantity </label>
-                        <div class="input-group">
-                            <!-- <textarea class="form-control" id="description" required></textarea> -->
-                            <input type="text" class="form-control" id="" placeholder="4" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="title">Order Transection</label>
-                      <select class="custom-select d-block w-100 form-control" id="orderstatus" required>
-                        <option value="">Fail</option>
-                      
-                        <option>Completed</option>
-                        
-                    </select>
-                  </div>
-                   
-                  <div class="mb-3">
-                    <label for="title">Comment</label>
-                    <div class="input-group">
-                      <textarea class="form-control" id="description" required></textarea>                                    
-                    </div>
-                </div>
-                   
-                   
-                   
-                    
-         
-                
-                    <div class="mb-3">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
-                    </div>
-                </form>
-              </div>
+              <button class="btn btn-block bg-primary" type="submit">SUBMIT</button>
+
             </div>
           </div>
-    </div>
+        </div>
+      </div>
+
+      <div class="container" style="border: 1px solid black;margin-top: 5em;">
+        <div class="row">
+          <div class="col-md-8 order-md-1">
+            <form class="needs-validation" novalidate enctype="multipart/form-data" id="add_product"
+              onload="resetSelection();">
+              <h4>Order Status</h4>
+              <br><br>
+              <div class="mb-3">
+                <label for="title">Order ID</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="title" placeholder="7814" required>
+
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="regproductid">Order Status</label>
+                <select class="custom-select d-block w-100 form-control" id="orderstatus" required>
+                  <option value="">Pending</option>
+                  <option>Progress</option>
+                  <option>Completed</option>
+
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="description">Quantity </label>
+                <div class="input-group">
+                  <!-- <textarea class="form-control" id="description" required></textarea> -->
+                  <input type="text" class="form-control" id="" placeholder="4" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="title">Order Transection</label>
+                <select class="custom-select d-block w-100 form-control" id="orderstatus" required>
+                  <option value="">Fail</option>
+
+                  <option>Completed</option>
+
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="title">Comment</label>
+                <div class="input-group">
+                  <textarea class="form-control" id="description" required></textarea>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="mb-3">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+              </div>
+            </form>
           </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 {% endblock %}
