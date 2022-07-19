@@ -1,7 +1,7 @@
 import email
 from django.shortcuts import redirect, render
 
-from app.models import AdminLogin, SellerRegistration
+from app.models import AdminLogin, CustomerReg, SellerRegistration
 
 
 def home(request):
@@ -63,7 +63,21 @@ def adminlogin(request):
 
 
 def customerlogin(request):
+    if request.method=="POST":
+        email=request.POST["email"]
+        password=request.POST["password"]
+        user_exists=CustomerReg.objects.filter(email=email,password=password).exists()
+        if user_exists:
+            customer=CustomerReg.objects.get(email=email,password=password)
+            request.session["customer _id"]=customer.id
+            return redirect("customer:home")
+        else:
+            msg="invaild email or password"
+            return render(request, "app/customerlogin.html",{"msg":msg})
+
     return render(request, "app/customerlogin.html")
+    
+   
 
 
 def sellerlogin(request):
@@ -94,6 +108,22 @@ def sellerlogin(request):
 
 
 def customerregistration(request):
+    if request.method=="POST":
+        email=request.POST["email"]
+        password=request.POST["password"]
+        customer_exists=CustomerReg.objects.filter(email=email).exists()
+        if customer_exists:
+            msg = "customer email already exists"
+                
+            return render(request, "app/customerregistration.html",{"msg":msg})
+        
+            
+        else:
+            customer=CustomerReg(email=email,password=password)
+            customer.save()
+            return redirect('app:customerlogin')
+          
+       
     return render(request, "app/customerregistration.html")
 
 

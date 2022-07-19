@@ -83,14 +83,13 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'cybershop',
-        'USER' : 'postgres',
-        'PASSWORD' : 'aathira',
-        'HOST' : 'localhost',
-        'POST' : '5432',
+        'NAME':"ecom",
+        'USER' :"postgres",
+        'PASSWORD' :"aathira",
+        'HOST' :"localhost",
+        'PORT':"5432",
+
     }
 }
 

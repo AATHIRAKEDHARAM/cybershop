@@ -28,3 +28,15 @@ class AdminLogin(models.Model):
 
     class Meta:
         db_table = "adminlogin"
+
+
+class CustomerReg(models.Model) :
+    email=models.CharField(max_length=120)
+    password=models.CharField(max_length=120)
+
+class Meta:
+    db_table="custreg"
+    
+
+
+
